@@ -1,6 +1,6 @@
-# 🌟 My Portfolio Website
+# 🌐 MyPortfolio
 
-A personal portfolio website showcasing my projects, skills, and journey as a Computer Science student specializing in AI & Machine Learning.
+A personal portfolio website built with vanilla HTML, CSS, and JavaScript — showcasing projects, skills, and contact information in a clean, responsive design.
 
 
 ## 🔗 Live Demo
@@ -8,133 +8,103 @@ A personal portfolio website showcasing my projects, skills, and journey as a Co
 🌐 [View Live Website](https://sakshidangi2006.github.io/MyPortfolio/)
 <!-- You can deploy on: GitHub Pages, Netlify, or Vercel (all free!) -->
 
-## 📋 About This Project
-
-This is my personal portfolio website built to showcase my skills, projects, and experience. It's designed to be clean, responsive, and easy to navigate.
 
 ## ✨ Features
 
-- 📱 Fully Responsive Design (works on all devices)
-- 🎨 Modern and Clean UI
-- ⚡ Fast Loading Speed
-- 🌓 Smooth Animations
-- 📧 Contact Form
-- 🛠️ Skills & Technologies Display
+- **Responsive Design** — Adapts seamlessly to all screen sizes (mobile, tablet, desktop)
+- **Smooth Animations** — Subtle transitions and scroll-based effects for a polished feel
+- **Project Showcase** — Dedicated section to highlight your best work
+- **Skills Section** — Visual representation of technical skills and proficiencies
+- **Contact Form** — Easy-to-use form for visitors to get in touch
+- **Clean UI** — Minimalist and professional aesthetic
 
-## 🛠️ Technologies Used
+---
 
-### Frontend
-- **HTML5** - Structure
-- **CSS3** - Styling
-- **JavaScript** - Interactivity
+## 🛠️ Tech Stack
 
-### Libraries & Frameworks
-- Font Awesome - Icons
-- Google Fonts - Typography
+| Technology | Purpose |
+|------------|---------|
+| **HTML5** | Structure and semantic markup |
+| **CSS3** | Styling, animations, and responsive layout |
+| **JavaScript (ES6+)** | Interactivity and dynamic behavior |
 
-## 📂 Project Structure
+> No frameworks. No dependencies. Pure web fundamentals.
+
+---
+
+## 📁 Project Structure
 
 ```
 MyPortfolio/
-│
-├── index.html          # Main HTML file
-├── style.css           # CSS styling
-├── script.js           # JavaScript functionality
-├── images/             # Image assets
-│   ├── profile.jpg
-├── README.md           # This file
+├── index.html        # Main entry point
+├── style.css         # All styles and responsive rules
+├── script.js         # JavaScript for interactivity
+├── Screenshot/       # Preview images of the portfolio
+└── README.md         # Project documentation
 ```
 
-## 🚀 How to Run Locally
+---
+
+## 🚀 Getting Started
+
+### View Live
+
+If deployed via GitHub Pages, visit:
+```
+https://sakshidangi2006.github.io/MyPortfolio/
+```
+
+### Run Locally
 
 1. **Clone the repository**
    ```bash
    git clone https://github.com/sakshidangi2006/MyPortfolio.git
    ```
 
-2. **Navigate to the project folder**
+2. **Navigate into the project folder**
    ```bash
    cd MyPortfolio
    ```
 
-3. **Open in browser**
-   - Simply double-click `index.html` or
-   - Right-click → Open with → Your Browser
-   - Or use Live Server extension in VS Code
+3. **Open in your browser**
+   ```bash
+   # Simply open index.html in any browser
+   open index.html
+   # or on Windows
+   start index.html
+   ```
 
-## 🎯 Sections
+No build tools or installations required. It runs directly in the browser!
 
-1. **Home/Hero Section** - Introduction and greeting
-2. **About Me** - My background and interests
-3. **Skills** - Technical skills and tools
-4. **Education** - Academic background
-5. **Contact** - Ways to reach me
+---
 
-## 🌱 What I Learned
+## 🎨 Customization
 
-Building this portfolio taught me:
-- ✅ Responsive web design principles
-- ✅ CSS Flexbox and Grid layouts
-- ✅ JavaScript DOM manipulation
-- ✅ Git version control basics
-- ✅ Deployment on GitHub Pages
+Want to make it your own? Here's where to look:
 
-## 🔮 Future Improvements
+| What to change | Where to find it |
+|---------------|-----------------|
+| Name, bio, intro text | `index.html` |
+| Colors, fonts, spacing | `style.css` |
+| Animations, scroll effects | `script.js` |
+| Profile picture | Replace image in `index.html` |
+| Projects & links | Projects section in `index.html` |
+| Social media links | Footer/contact section in `index.html` |
 
-- [ ] Add dark mode toggle
-- [ ] Integrate a blog section
-- [ ] Add more interactive animations
-- [ ] Include testimonials section
-- [ ] Add project filters
-- [ ] Implement contact form backend
-- [ ] Add loading animations
-- [ ] Optimize for better SEO
+---
 
-## 📝 How to Deploy (GitHub Pages)
+## 📬 Contact
 
-1. Go to your repository settings
-2. Scroll to "Pages" section
-3. Under "Source", select "main" branch
-4. Click "Save"
-5. Your site will be live at: `https://sakshidangi2006.github.io/MyPortfolio/`
+**Sakshi Dangi**
 
-## 🤝 Contributing
+- 💼 GitHub: [@sakshidangi2006](https://github.com/sakshidangi2006)
 
-This is a personal project, but suggestions are always welcome!
-
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature/improvement`)
-3. Commit your changes (`git commit -m 'Add some feature'`)
-4. Push to the branch (`git push origin feature/improvement`)
-5. Open a Pull Request
+---
 
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## 📧 Contact
-
-**Sakshi Dangi**
-
-- 📧 Email: sakshidangi2006@gmail.com
-- 💼 LinkedIn: [sakshidangi-633b2635b](https://www.linkedin.com/in/sakshidangi-633b2635b)
-- 🐱 GitHub: [@sakshidangi2006](https://github.com/sakshidangi2006)
-
-## 🙏 Acknowledgments
-
-- Icons from Font Awesome
-- Fonts from Google Fonts
-
 ---
 
-<div align="center">
-  
-  ### ⭐ If you like this project, please give it a star!
-  
-  Made with ❤️ by Sakshi Dangi
-  
-</div>
-
----
-
-**Last Updated:** February 2026
+<p align="center">Made with ❤️ by Sakshi Dangi</p>
