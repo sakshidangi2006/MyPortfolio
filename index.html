@@ -1,165 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sakshi Dangi — Computer Science student, web developer, and Python enthusiast.">
-  <title>Sakshi Dangi Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sakshi Dangi — AI/ML &amp; Full-Stack Developer</title>
+<meta name="description" content="Sakshi Dangi — B.Tech CSE (AI &amp; ML) student building full-stack applications with real AI behind them. Portfolio, build log, and contact.">
+<meta name="theme-color" content="#12141B">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sakshi Dangi — AI/ML &amp; Full-Stack Developer">
+<meta property="og:description" content="B.Tech CSE (AI &amp; ML) student building full-stack apps with real AI behind them — not notebook demos.">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2312141B'/%3E%3Ctext x='32' y='42' font-family='Space Grotesk, sans-serif' font-size='26' font-weight='700' fill='%23FF7A45' text-anchor='middle'%3ESD%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- NAVIGATION -->
-  <header>
-    <nav>
-      <a href="#Home">Home</a>
-      <a href="#About">About</a>
-      <a href="#Education">Education</a>
-      <a href="#Skills">Skills</a>
-      <a href="#Projects">Projects</a>
-      <a href="#Contact">Contact</a>
-    </nav>
+<a class="skiplink" href="#about">Skip to content</a>
+
+<!-- reading-progress signal, fills as you scroll -->
+<div class="progress" aria-hidden="true"><div class="progress__fill" id="progressFill"></div></div>
+
+<!-- grain / grid backdrop -->
+<div class="backdrop" aria-hidden="true"></div>
+
+<!-- side index / nav -->
+<nav class="indexnav" id="indexnav" aria-label="Section index">
+  <a href="#top" class="indexnav__mark" aria-label="Back to top">SD</a>
+  <ul class="indexnav__list">
+    <li><a href="#about" data-section="about">About</a></li>
+    <li><a href="#log" data-section="log">Build Log</a></li>
+    <li><a href="#stack" data-section="stack">Stack</a></li>
+    <li><a href="#roadmap" data-section="roadmap">Roadmap</a></li>
+    <li><a href="#contact" data-section="contact">Contact</a></li>
+  </ul>
+  <a class="indexnav__resume" href="mailto:sakshidangi2006@gmail.com">Email me ↗</a>
+</nav>
+
+<main id="top">
+
+  <!-- HERO -->
+  <header class="hero" id="hero">
+    <p class="hero__eyebrow stagger" style="--d:0">B.TECH CSE — AI &amp; ML · ACROPOLIS INSTITUTE OF TECHNOLOGY &amp; RESEARCH, INDORE</p>
+    <h1 class="hero__name stagger" style="--d:1">Sakshi Dangi</h1>
+    <p class="hero__role stagger" style="--d:2">I build software that reads, scores, and responds —<br class="br-desktop"> full-stack apps with real AI behind them, not notebook demos.</p>
+
+    <div class="signal stagger" style="--d:3" id="signalWrap" aria-hidden="true">
+      <svg class="signal__svg" id="signalSvg" viewBox="0 0 900 120" preserveAspectRatio="none">
+        <path class="signal__path" d="M0,80 C 40,80 60,30 100,30 C 140,30 150,95 190,95 C 230,95 245,15 290,15 C 330,15 345,70 385,70 C 425,70 440,45 480,45 C 520,45 535,90 580,90 C 620,90 635,25 680,25 C 720,25 735,60 780,60 C 820,60 835,40 900,40" />
+      </svg>
+    </div>
+
+    <div class="hero__actions stagger" style="--d:4">
+      <a href="#log" class="btn btn--primary">Read the build log</a>
+      <a href="mailto:sakshidangi2006@gmail.com" class="btn btn--ghost">Email me</a>
+    </div>
+
+    <div class="hero__links stagger" style="--d:5">
+      <a href="https://github.com/sakshidangi2006" target="_blank" rel="noopener">GitHub ↗</a>
+      <span class="dot">·</span>
+      <a href="https://www.linkedin.com/in/sakshi-dangi-633b2635b/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+
+    <dl class="factstrip stagger" style="--d:6">
+      <div><dt>Location</dt><dd>Indore, India</dd></div>
+      <div><dt>Focus</dt><dd>AI/ML · Backend</dd></div>
+      <div><dt>Status</dt><dd>Open to internships</dd></div>
+    </dl>
+
+    <a href="#about" class="scrollcue" aria-label="Scroll to about section">
+      <span>scroll</span>
+      <svg width="10" height="16" viewBox="0 0 10 16" fill="none"><path d="M5 0V15M5 15L1 11M5 15L9 11" stroke="currentColor" stroke-width="1.4"/></svg>
+    </a>
   </header>
 
-  <!-- HOME -->
-  <section class="home" id="Home">
-    <div class="intro">
-      <h1>Hello, I'm Sakshi Dangi</h1>
-      <p>Computer Science Student | Web Developer | Python & Data Analysis Enthusiast</p>
-      <a href="https://github.com/sakshidangi2006" class="btn" target="_blank">View My Work</a>
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="section__head">
+      <span class="section__tag">01 — ABOUT</span>
+      <h2 class="section__title">Notebook, not a highlight reel</h2>
     </div>
-    <div class="profile-pic">
-      </div>
-    <p> About Me</p>
-    <div class="About" id="About">I am Sakshi Dangi, a B.Tech student at RGPV University,passionate about engineering,technology, and continuous learning.
-      This portfolio reflects my academic journey, skills, and projects, showcasing my efforts to grow as a future engineer. Thank you for visiting and I hope you enjoy exploring my work.
-    </div>
-    </section>
-    <section>
-    <div class="Education" id="Education">
-      <p> Education</p>
-      <table border="1">
-        <tr >
-          <th>Standard</th>
-          <th>School/University</th>
-          <th>Grade(%)/CGPA</th>
-        </tr>
-        <tr>
-          <td>X</td>
-          <td>Nirmala Convent Hr. Sec. School</td>
-          <td>90.6</td>
-        </tr>
-         <tr>
-          <td>XII</td>
-          <td>Nirmala Convent Hr. Sec. School</td>
-          <td>86.6</td>
-        </tr>
-         <tr>
-          <td>I</td>
-          <td>Acropolis Institute of Technology & Research</td>
-          <td>7.9</td>
-        </tr>
-      </table>
-    </div>
-    </section>
-    <section>
-    <div class="Skills" id="Skills">
-      <p>My Skills</p>
-    <div class="boxes">
-      <div class="box"><img src="https://cdn.iconscout.com/icon/free/png-256/free-html-5-icon-svg-download-png-1175208.png" alt="HTML icon">HTML</div>
-      <div class="box"><img src="https://cdn.iconscout.com/icon/free/png-256/free-css3-icon-svg-download-png-1175237.png" alt="CSS icon">CSS</div>
-      <div class="box"><img src="https://static.vecteezy.com/system/resources/thumbnails/027/127/463/small_2x/javascript-logo-javascript-icon-transparent-free-png.png" alt="JavaScript icon">JavaScript</div>
-      <div class="box"><img src="https://cdn-icons-png.flaticon.com/256/6132/6132222.png" alt="C++ icon">C++</div>
-      <div class="box"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/c-program-icon.png" alt="C icon">C</div>
-      <div class="box"><img src="https://cdn-icons-png.flaticon.com/128/5968/5968350.png" alt="Python icon">Python</div>
-      <div class="box"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn5o2UmZneaZUdoop6FljZoAatSeOLn68iRw&s" alt="Numpy icon">Numpy</div>
-      <div class="box"><img src="https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/2/pandas-187ap5b4rnewum3e0kwot.png/pandas-d7d1sqnks3dbdy0lu80am4.png" alt="Pandas icon">Pandas</div>
-      <div class="box"><img src="https://img.icons8.com/color/1200/matplotlib.jpg" alt="Matplotlib icon">Matplotlib</div>
+
+    <div class="paper">
+      <p class="paper__lede">I'm a Computer Science student specializing in AI &amp; ML who'd rather ship something that works than perfect something that doesn't. My projects parse real files, call real AI APIs, store real user data, and handle the unglamorous parts — auth, databases, error states — that separate a working product from a weekend script.</p>
+
+      <ul class="facts">
+        <li><span class="facts__label">Built</span><span class="facts__value">AI Resume Analyzer &amp; Mood Mirror — two full-stack Flask apps with AI integration, authentication, and persistent storage, shipped end to end.</span></li>
+        <li><span class="facts__label">Building</span><span class="facts__value">A sentiment-analysis engine trained from scratch, and exploring agentic AI workflows with human-in-the-loop approval logic.</span></li>
+        <li><span class="facts__label">Strengthening</span><span class="facts__value">Data structures &amp; algorithms for technical interviews.</span></li>
+        <li><span class="facts__label">Looking for</span><span class="facts__value">AI/ML engineering or backend development internships.</span></li>
+      </ul>
     </div>
   </section>
 
-  <!-- PROJECTS -->
-<section class="projects" id="Projects">
-  <h2>Projects</h2>
-
-  <div class="project">
-    
-    <h3>Project 1: Personal Portfolio Website</h3>
-    <img src="Screenshot\portfolio.jpeg" alt="Portfolio Website Screenshot" class="project-img">
-    <p>Created a responsive personal portfolio website using HTML, CSS, and JavaScript. <a href="https://github.com/sakshidangi2006/MyPortfolio" target="_blank">View on GitHub</a></p>
-  </div>
-
-  <div class="project">
-    <h3>Project 2: Data Analysis with Python</h3>
-    <img src="Screenshot\Countries.png" alt="Portfolio Website Screenshot" class="project-img">
-     <p>Used Pandas & Numpy to analyze datasets and visualize trends. <a href="https://github.com/sakshidangi2006/Numpy_And_Pandas/blob/main/Countries.ipynb" target="_blank">View on GitHub</a></p>
+  <!-- BUILD LOG -->
+  <section class="section" id="log">
+    <div class="section__head">
+      <span class="section__tag">02 — BUILD LOG</span>
+      <h2 class="section__title">What I've actually shipped</h2>
+      <p class="section__sub">Four entries, in the order I built them. The first two are live; the rest are in motion.</p>
     </div>
-    
-    <div class="project">
-      <h3>Project 3: Bank Management System using Python</h3>
-      <img src="Screenshot\Bank_Management_System.png" alt="Portfolio Website Screenshot" class="project-img">
-    <p>Developed a console-based bank management system with account creation, transactions, and balance inquiry. <a href="https://github.com/sakshidangi2006/Python-Projects/tree/main/Bank_Management_System" target="_blank">View on GitHub</a></p>
-  </div>
-  
-  <div class="project">
-    <h3>Project 4: To-Do List Application</h3>
-    <img src="Screenshot\To-Do-List.png" alt="Portfolio Website Screenshot" class="project-img">
-    <p>Built a simple Python to-do list app to add, complete, and delete tasks. <a href="https://github.com/sakshidangi2006/Python-Projects/tree/main/To_Do_List" target="_blank">View on GitHub</a></p>
-  </div>
-  
-  <div class="project">
-    <h3>Project 5: Simple Calculator</h3>
-    <img src="Screenshot\Simple_Calculator.png" alt="Portfolio Website Screenshot" class="project-img">
-    <p>Created a basic Python calculator with a graphical interface for arithmetic operations. <a href="https://github.com/sakshidangi2006/Python-Projects/blob/main/Calculator.py" target="_blank">View on GitHub</a></p>
-  </div>
-  
-  <div class="project">
-    <h3>Project 6: Scientific Calculator</h3>
-    <img src="Screenshot\Scientific_Calculator.png" alt="Portfolio Website Screenshot" class="project-img">
-    <p>Developed a scientific calculator with HTML, CSS, and JavaScript for advanced mathematical operations. <a href="https://github.com/sakshidangi2006/JavaScript-Project/tree/main/Calculator-Program" target="_blank">View on GitHub</a></p>
-  </div>
-  
-  <div class="project">
-    <h3>Project 7: Snake Water Gun Game</h3>
-    <img src="Screenshot\snake_water_gun_game.jpeg" alt="Snake Water Gun Game Screenshot" class="project-img">
-    <p>
-      Implemented the classic Snake Water Gun game using HTML, CSS, and JavaScript to play against the computer. 
-      <a href="https://github.com/sakshidangi2006/JavaScript-Project/tree/main/Snake_Water_Gun_Game" target="_blank" >View on GitHub</a>
-      <a href="https://sakshidangi2006.github.io/JavaScript-Project/Snake_Water_Gun_Game/" target="_blank">Live Demo</a>
-    </p>
-  </div>
-  
-  <div class="project">
-    <h3>Project 8: User Directory</h3>
-    <img src="Screenshot\User_Directory.png" alt="Portfolio Website Screenshot" class="project-img">
-    <p>Created a user directory using HTML, CSS, and JavaScript to manage and store contact information. <a href="https://github.com/sakshidangi2006/JavaScript-Project/tree/main/User_Directory" target="_blank">View on GitHub</a></p>
-  </div>
-  
-  <div class="project">
-    <h3>Project 9: IPL Capstone Project</h3>
-    <img src="Screenshot\IPL_Capstone_Project.png" alt="Portfolio Website Screenshot" class="project-img">
-    <p>Developed a comprehensive IPL analysis project using Python and data visualization tools. <a href="https://github.com/sakshidangi2006/Data_Visualization/blob/main/Data_Visualization/IPL_Capstone_Project.ipynb" target="_blank">View on GitHub</a></p>
-  </div>
-</section>
+
+    <div class="logwrap">
+
+      <!-- ENTRY 01 -->
+      <article class="entry" data-entry="01">
+        <div class="entry__head">
+          <span class="entry__num">ENTRY 01</span>
+          <h3 class="entry__title">AI Resume Analyzer</h3>
+          <span class="status status--shipped">Shipped</span>
+        </div>
+        <p class="entry__tagline">Upload a resume, set a target role — get structured AI feedback in seconds.</p>
+
+        <div class="entry__body">
+          <div class="entry__text">
+            <p>A full-stack web app that parses PDF and DOCX resumes, sends them to an AI API alongside a target job role and description, and returns structured, actionable feedback. Includes user authentication, a personal history dashboard, and per-report delete control.</p>
+            <ul class="tags">
+              <li>Python</li><li>Flask</li><li>SQLAlchemy</li><li>PyPDF2</li><li>python-docx</li><li>AI API</li>
+            </ul>
+            <div class="entry__links">
+              <a href="https://github.com/sakshidangi2006/AI_Resume_Analyzer" target="_blank" rel="noopener">View code →</a>
+            </div>
+          </div>
+          <div class="entry__visual">
+            <svg class="spark spark--bars" viewBox="0 0 160 90" aria-hidden="true">
+              <line x1="6" y1="82" x2="154" y2="82" class="spark__base"/>
+              <rect class="spark__bar" x="16" y="60" width="14" height="22"/>
+              <rect class="spark__bar" x="42" y="46" width="14" height="36"/>
+              <rect class="spark__bar" x="68" y="30" width="14" height="52"/>
+              <rect class="spark__bar" x="94" y="38" width="14" height="44"/>
+              <rect class="spark__bar" x="120" y="16" width="14" height="66"/>
+            </svg>
+            <span class="spark__caption">resume score, before → after edits</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ENTRY 02 -->
+      <article class="entry" data-entry="02">
+        <div class="entry__head">
+          <span class="entry__num">ENTRY 02</span>
+          <h3 class="entry__title">Mood Mirror</h3>
+          <span class="status status--shipped">Shipped</span>
+        </div>
+        <p class="entry__tagline">A mood journal that reflects emotional patterns back at you.</p>
+
+        <div class="entry__body">
+          <div class="entry__text">
+            <p>A full-stack Flask app where users log journal-style mood entries and receive AI-generated insights and reflections. User auth, SQLite-backed mood history, and trend tracking turn single entries into a pattern over time.</p>
+            <ul class="tags">
+              <li>Python</li><li>Flask</li><li>SQLite</li><li>AI API</li>
+            </ul>
+            <div class="entry__links">
+              <a href="https://github.com/sakshidangi2006/Mood_Mirror" target="_blank" rel="noopener">View code →</a>
+            </div>
+          </div>
+          <div class="entry__visual">
+            <svg class="spark spark--wave" viewBox="0 0 160 90" aria-hidden="true">
+              <line x1="6" y1="45" x2="154" y2="45" class="spark__base"/>
+              <path class="spark__line" d="M6,45 C20,20 35,70 50,45 C65,20 80,70 95,45 C110,20 125,70 140,45 L154,45"/>
+            </svg>
+            <span class="spark__caption">mood trend across entries</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ENTRY 03 -->
+      <article class="entry" data-entry="03">
+        <div class="entry__head">
+          <span class="entry__num">ENTRY 03</span>
+          <h3 class="entry__title">DSA Practice</h3>
+          <span class="status status--progress">In progress</span>
+        </div>
+        <p class="entry__tagline">Structured reps on the fundamentals that interviews actually test.</p>
+
+        <div class="entry__body">
+          <div class="entry__text">
+            <p>An ongoing, organized collection of arrays, linked lists, sorting, and searching problems solved in C++ — the unglamorous repetition behind being fast and correct in an interview room.</p>
+            <ul class="tags">
+              <li>C++</li><li>Data Structures</li><li>Algorithms</li>
+            </ul>
+            <div class="entry__links">
+              <a href="https://github.com/sakshidangi2006/DSA" target="_blank" rel="noopener">View code →</a>
+            </div>
+          </div>
+          <div class="entry__visual">
+            <svg class="spark spark--sort" viewBox="0 0 160 90" aria-hidden="true">
+              <line x1="6" y1="82" x2="154" y2="82" class="spark__base"/>
+              <rect class="spark__bar spark__bar--sort" x="16" y="58" width="14" height="24"/>
+              <rect class="spark__bar spark__bar--sort" x="42" y="44" width="14" height="38"/>
+              <rect class="spark__bar spark__bar--sort" x="68" y="64" width="14" height="18"/>
+              <rect class="spark__bar spark__bar--sort" x="94" y="24" width="14" height="58"/>
+              <rect class="spark__bar spark__bar--sort" x="120" y="50" width="14" height="32"/>
+            </svg>
+            <span class="spark__caption">sorting, mid-pass</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ENTRY 04 -->
+      <article class="entry" data-entry="04">
+        <div class="entry__head">
+          <span class="entry__num">ENTRY 04</span>
+          <h3 class="entry__title">Sentiment Analysis Tool</h3>
+          <span class="status status--upcoming">Building</span>
+        </div>
+        <p class="entry__tagline">Classifying text as positive, negative, or neutral — without calling an external API.</p>
+
+        <div class="entry__body">
+          <div class="entry__text">
+            <p>A from-scratch NLP pipeline using TF-IDF vectorization with Logistic Regression and Naive Bayes classifiers on the IMDB review dataset — built to understand sentiment analysis at the model level instead of behind a black box.</p>
+            <ul class="tags">
+              <li>Python</li><li>Scikit-learn</li><li>NLTK</li><li>Pandas</li>
+            </ul>
+          </div>
+          <div class="entry__visual">
+            <svg class="spark spark--dotted" viewBox="0 0 160 90" aria-hidden="true">
+              <line x1="6" y1="45" x2="154" y2="45" class="spark__base"/>
+              <path class="spark__line spark__line--dotted" d="M6,45 C30,42 45,55 65,45 C85,35 100,52 120,45 L154,45"/>
+            </svg>
+            <span class="spark__caption">model under training</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section class="section" id="stack">
+    <div class="section__head">
+      <span class="section__tag">03 — STACK</span>
+      <h2 class="section__title">What I reach for</h2>
+    </div>
+
+    <div class="stackgrid">
+      <div class="stackgroup">
+        <h3>Languages</h3>
+        <ul class="pills">
+          <li>Python</li><li>C++</li><li>JavaScript</li><li>HTML5</li><li>CSS3</li>
+        </ul>
+      </div>
+      <div class="stackgroup">
+        <h3>Backend &amp; Data</h3>
+        <ul class="pills">
+          <li>Flask</li><li>SQLAlchemy</li><li>SQLite</li>
+        </ul>
+      </div>
+      <div class="stackgroup">
+        <h3>AI &amp; ML</h3>
+        <ul class="pills">
+          <li>Anthropic API</li><li>Gemini API</li><li>Scikit-learn</li><li>Pandas</li><li>NumPy</li>
+        </ul>
+      </div>
+      <div class="stackgroup">
+        <h3>Tools</h3>
+        <ul class="pills">
+          <li>Git</li><li>GitHub</li><li>Jupyter</li><li>VS Code</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section class="section" id="roadmap">
+    <div class="section__head">
+      <span class="section__tag">04 — ROADMAP</span>
+      <h2 class="section__title">2026, tracked</h2>
+    </div>
+
+    <ul class="checklist">
+      <li class="is-done"><span class="checklist__box"></span>Ship AI Resume Analyzer (Flask + AI API)</li>
+      <li class="is-done"><span class="checklist__box"></span>Ship Mood Mirror (Flask + AI API)</li>
+      <li class="is-active"><span class="checklist__box"></span>Master DSA for technical interviews</li>
+      <li><span class="checklist__box"></span>Finish the from-scratch sentiment-analysis tool</li>
+      <li><span class="checklist__box"></span>Complete a Kaggle ML competition</li>
+      <li><span class="checklist__box"></span>Build an image classifier with a CNN</li>
+      <li><span class="checklist__box"></span>Contribute to an open-source project</li>
+      <li><span class="checklist__box"></span>Deploy a project to the cloud (AWS/GCP)</li>
+    </ul>
+  </section>
 
   <!-- CONTACT -->
-
-  <section class="contact" id="Contact">
-    <h2>Connect with Me</h2>
-
-    <div class="social">
-      <a href="https://www.linkedin.com/in/sakshi-dangi-633b2635b" target="_blank"><img src="https://static.vecteezy.com/system/resources/previews/018/930/480/non_2x/linkedin-logo-linkedin-icon-transparent-free-png.png" alt="LinkedIn"/></a>
-      <a href="mailto:sakshidangi2006@gmail.com" target="_blank"><img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" alt="Gmail"/></a>
-      <a href="https://www.instagram.com/sakshidangi1106/" target="_blank"><img src="https://static.vecteezy.com/system/resources/previews/042/387/654/non_2x/instagram-button-icon-set-instagram-screen-social-media-and-social-network-interface-template-stories-user-button-symbol-sign-logo-stories-liked-editorial-free-png.png" alt="Instagram"/></a>
-      <a href="https://github.com/sakshidangi2006" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub"/></a>
+  <footer class="contact" id="contact">
+    <p class="contact__quote">"Build something real. That's how you learn."</p>
+    <h2 class="contact__title">Open to internship opportunities<br class="br-desktop"> in AI/ML and software development.</h2>
+    <div class="contact__actions">
+      <a href="mailto:sakshidangi2006@gmail.com" class="btn btn--primary">sakshidangi2006@gmail.com</a>
     </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Sakshi's Portfolio. All rights reserved.</p>
+    <div class="contact__links">
+      <a href="https://github.com/sakshidangi2006" target="_blank" rel="noopener">GitHub</a>
+      <span class="dot">·</span>
+      <a href="https://www.linkedin.com/in/sakshi-dangi-633b2635b/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p class="contact__foot">Designed &amp; built by Sakshi Dangi · <span id="year"></span></p>
   </footer>
 
-  <script src="script.js"></script>
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>
